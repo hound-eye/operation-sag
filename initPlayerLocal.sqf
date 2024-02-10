@@ -1,22 +1,10 @@
-execVM "briefingBoard.sqf";
-// prepare text briefingName
-
-// TODO prepare tasks
-
-execVM "diary.sqf";
-
+// add actions for briefing board slides
+execVM "configureBriefingBoard.sqf";
+// enable diary entries
+execVM "configureDiary.sqf";
+// configure pick-able intel actions and content
+execVM "configureIntel.sqf";
+// configure teleport actions for transport
+execVM "configureTransport.sqf";
 // init objective intel
-if (hasInterface) then
-{
-	obj_intel_hq addAction [
-		"Collect documents", // custom addAction title
-		{ [_this, "action"] spawn BIS_fnc_initIntelObject },
-		[],
-		10,
-		true,
-		true,
-		"",
-		"isPlayer _this && { _this distance _target < 2 } &&
-		{ (side group _this) in (_target getVariable ['RscAttributeOwners', [west, east, resistance, civilian]]) }"
-	];
-};
+spectator_table addAction ["<t color='#00FF00'>Spectator</t>", "spectator.sqf", [], 1, true, true, "", "spectator_table distance _target < 3"];
