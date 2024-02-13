@@ -8,11 +8,15 @@ params ["_toPos", "_deployMessage"];
 //_toPos - position to teleport reinforcements to
 // spawnees is a reference-type var
 
-[[blufor, "BLU"], "begin test"] remoteExec ["sideChat"];
-
 _spawnees = list spawn_area;
 private "_playerSpawnees";
 _playerSpawnees = _spawnees select { isPlayer _x };
+
+if (count _spawnees > 0) then 
+{
+	[[blufor, "BLU"], "Objective complete! Sending available reinforcements to your location."] remoteExec 
+};
+
 // hint players in the trigger, that they are about to be deployed
 {
 	for [{_i=10},{_i>=2},{_i=_i-1}] do 

@@ -1,6 +1,3 @@
-[missionNamespace, "MY_allowedReinforcements", false] call BIS_fnc_getServerVariable;
-if (!MY_allowedReinforcements) exitWith {};
-
 params ["_thisTrigger"];
 private ["_toPos", "_deployMessage"];
 
@@ -43,8 +40,12 @@ switch (_thisTrigger) do
 		["TSK_Support", "SUCCEEDED"] call BIS_fnc_taskSetState;
 	};
 };
-if (!isNil "_deployMessage") then {
-	_objectiveScript = call compile preprocessFileLineNumbers "deployReinforcements.sqf";
-	[[blufor, "BLU"], _deployMessage] remoteExec ["sideChat"];
+[missionNamespace, "MY_allowedReinforcements", false] call BIS_fnc_getServerVariable;
+if (MY_allowedReinforcements) then
+{
+	_objectiveScript = compile preprocessFileLineNumbers "deployReinforcements.sqf";
 	[_toPos, _deployMessage] call _objectiveScript;
-}
+} else
+{
+	[[blufor, "BLU"], "We cannot send any more reinforcements!"] remoteExec ["sideChat"];
+};

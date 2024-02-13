@@ -9,13 +9,71 @@ class Header
 	minPlayers =  1;	// minimum number of players the mission supports
 	maxPlayers = 10;	// maximum number of players the mission supports
 };
+
+class CfgRoles
+{
+	class GurSquadCommander
+	{
+		displayName = "Squad Commander";
+		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
+	};
+	class GurSeniorRifleman
+	{
+		displayName = "Senior Rifleman";
+		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
+	};
+	class GurMachineGunner
+	{
+		displayName = "Machine Gunner";
+		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
+	};
+	class GurSniper
+	{
+		displayName = "Sniper";
+		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
+	};
+	class GurGrenadier
+	{
+		displayName = "Grenadier";
+		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
+	};
+	class GurMedic
+	{
+		displayName = "Medic";
+		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
+	};
+	class GurRifleman
+	{
+		displayName = "Rifleman";
+		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
+	};
+	class GurSapper
+	{
+		displayName = "Sapper";
+		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
+	};
+};
+
 class CfgRespawnInventory
 {
+	class Zeussy
+	{
+		displayName = "Zeus";
+		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
+		role = "Default";
+		show = "true";
+		uniformClass = "SF09";
+		backpack = "";
+		weapons[] = {"rhs_weap_aks74u", "rhsusf_weap_glock17g4", "Rangefinder", "Throw", "Put"};
+		magazines[] = {"rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhsusf_mag_17Rnd_9x19_JHP"};
+		items[] = {"ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_tourniquet", "ACE_tourniquet"};
+		linkedItems[] = {"rhs_vest_pistol_holster", "rhs_googles_black", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "B_UavTerminal", "rhs_acc_pgs64_74u"};
+	};
 	class GUR_SniperSVD
 	{
 		displayName = "SVD";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Default";
+		role = "GurSniper";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "";
@@ -26,9 +84,9 @@ class CfgRespawnInventory
 	};
 	class GUR_SniperSR25
 	{
-		displayName = "SR 25";
+		displayName = "SR-25";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Sniper";
+		role = "GurSniper";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "";
@@ -41,7 +99,7 @@ class CfgRespawnInventory
 	{
 		displayName = "M4A1 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Rifleman";
+		role = "GurRifleman";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "";
@@ -54,7 +112,7 @@ class CfgRespawnInventory
 	{
 		displayName = "AK-74 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Rifleman";
+		role = "GurRifleman";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "";
@@ -67,7 +125,7 @@ class CfgRespawnInventory
 	{
 		displayName = "FN Minimi";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Machine Gunner";
+		role = "GurMachineGunner";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_assault_eagleaiii_ocp";
@@ -76,12 +134,11 @@ class CfgRespawnInventory
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet"};
 		linkedItems[] = {"rhsusf_iotv_ocp_SAW", "rhsusf_opscore_mc_cover_pelt", "rhsusf_shemagh2_gogg_tan", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhsusf_acc_nt4_black", "rhsusf_acc_eotech_xps3", "rhsusf_acc_saw_bipod"};
 	};
-
 	class GUR_GunnerPKM
 	{
 		displayName = "PKM";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Machine Gunner";
+		role = "GurMachineGunner";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_assault_eagleaiii_ocp";
@@ -94,7 +151,7 @@ class CfgRespawnInventory
 	{
 		displayName = "AK-74 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Medic";
+		role = "GurMedic";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_assault_eagleaiii_ocp";
@@ -107,7 +164,7 @@ class CfgRespawnInventory
 	{
 		displayName = "M4A1 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Medic";
+		role = "GurMedic";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_assault_eagleaiii_ocp";
@@ -120,7 +177,7 @@ class CfgRespawnInventory
 	{
 		displayName = "AK-74 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Grenadier";
+		role = "GurGrenadier";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhs_rpg_empty";
@@ -133,7 +190,7 @@ class CfgRespawnInventory
 	{
 		displayName = "M4A1 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Default";
+		role = "GurGrenadier";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhs_rpg_empty";
@@ -146,7 +203,7 @@ class CfgRespawnInventory
 	{
 		displayName = "AK-74 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Sapper";
+		role = "GurSapper";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_falconii_mc";
@@ -159,7 +216,7 @@ class CfgRespawnInventory
 	{
 		displayName = "M4A1 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Sapper";
+		role = "GurSapper";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_falconii_mc";
@@ -172,7 +229,7 @@ class CfgRespawnInventory
 	{
 		displayName = "AK-74 Red dot + GP25";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Senior Rifleman";
+		role = "GurSeniorRifleman";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_falconii_mc";
@@ -185,7 +242,7 @@ class CfgRespawnInventory
 	{
 		displayName = "M4A1 Red dot + M203";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Senior Rifleman";
+		role = "GurSeniorRifleman";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_falconii_mc";
@@ -198,7 +255,7 @@ class CfgRespawnInventory
 	{
 		displayName = "M4A1 LPVO";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Squad Commander";
+		role = "GurSquadCommander";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "";
@@ -211,7 +268,7 @@ class CfgRespawnInventory
 	{
 		displayName = "AK-74 LPVO";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "Squad Commander";
+		role = "GurSquadCommander";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "";
@@ -221,5 +278,3 @@ class CfgRespawnInventory
 		linkedItems[] = {"Vest04", "rhsusf_opscore_mc_cover_pelt", "rhsusf_oakley_goggles_clr", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhs_acc_tgpa", "Scot_EO_Vudu"};
 	};
 };
-
-
