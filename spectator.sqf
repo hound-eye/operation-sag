@@ -3,7 +3,7 @@ private ["_Key","_RscLayer", "_HintLayer"];
 /* Prevents unit moving */
 (_this select 1) enableSimulation false;
 /* Only */
-RscSpectator_allowedGroups = [raid_group_2];
+RscSpectator_allowedGroups = [raid_group];
 /* Prevents free spectator camera */
 RscSpectator_allowFreeCam = false;
 /* Disable post processing effects for spectator */

@@ -1,19 +1,18 @@
-params ["_fromTrigger", "_toPos", "_includeAI"];
+//server side-only script
+if (!isServer) exitWith {};
+
+params ["_toPos", "_deployMessage"];
 // script that teleports players with a 10 second delay,
 // applying fade-to-black effect 2 seconds before the teleport
 //
-//_fromTrigger - trigger object, from which we get list of players(units) to teleport
 //_toPos - position to teleport reinforcements to
 // spawnees is a reference-type var
 
+[[blufor, "BLU"], "begin test"] remoteExec ["sideChat"];
+
 _spawnees = list spawn_area;
-// if includeAI is not set, then we only want to select players from the trigger
 private "_playerSpawnees";
-if (!isNil "_includeAI") then {
-	_playerSpawnees = _spawnees select { isPlayer _x };
-} else {
-	_playerSpawnees = _spawnees
-};
+_playerSpawnees = _spawnees select { isPlayer _x };
 // hint players in the trigger, that they are about to be deployed
 {
 	for [{_i=10},{_i>=2},{_i=_i-1}] do 
@@ -23,25 +22,25 @@ if (!isNil "_includeAI") then {
     };
 	["Deploying now!"] remoteExec ["hint", owner _x];
 } forEach _playerSpawnees;
-[blufor, "BLU"] sideChat format ["Deploying reinforcements: %1", _playerSpawnees];
-// get new list of players again
-if (!isNil "_includeAI") then {
-	_playerSpawnees = _spawnees select { isPlayer _x };
-} else {
-	_playerSpawnees = _spawnees
-};
 
-if (count _playerSpawnees > 0) then
+if (count _spawnees > 0) then
 {
+	// 2 second before teleport, apply screen blackout (for players)
 	{
-		// perform teleport
-		[0,"BLACK",2,0] remoteExec ["BIS_fnc_fadeEffect", owner _x];
-		sleep 2;
-		// TODO DISABLE SPECTATOR CAMERA VIEW
+		
+		if (isPlayer _x ) then {
+			[0,"BLACK",2,0] remoteExec ["BIS_fnc_fadeEffect", owner _x];
+		};
+	} forEach _spawnees;
+	sleep 2;
+	// at 0 seconds, teleport units and clear the screen (for players)
+	{
 		_x setPosATL getPos _toPos;
-		[""] remoteExec ["hintSilent", owner _x];
-		[1,"BLACK",1,0] remoteExec ["BIS_fnc_fadeEffect", owner _x];
+		if (isPlayer _x) then {
+			[""] remoteExec ["hintSilent", owner _x];
+			[1,"BLACK",1,0] remoteExec ["BIS_fnc_fadeEffect", owner _x];
+		};
+	} forEach _spawnees;
 
-	} forEach _playerSpawnees;
-	[[blufor, "BLU"], "Reinforcements have arrived!"] remoteExec ["sideChat"];
+	[[blufor, "BLU"], _deployMessage] remoteExec ["sideChat"];
 }

@@ -1,6 +1,4 @@
-//private _situationEntry = compile preprocessFile "myScript.sqf";
-//private _missionEntry = compile preprocessFile "myScript.sqf";
-
+//client-side script
 _mission = loadFile "texts\mission.html";
 _enemy = loadFile "texts\enemy.html";
 _terrain = loadFile "texts\terrain.html";

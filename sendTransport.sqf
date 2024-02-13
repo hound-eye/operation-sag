@@ -15,10 +15,7 @@ _transportUnit setVehicleLock "LOCKED";
 	[{ 2 fadeSound 0; }] remoteExec ["call", _x];
 	[{ [0,"BLACK",2,1] call BIS_fnc_fadeEffect; }] remoteExec ["call", _x];
 } forEach crew _transportUnit;
-
-[0,"BLACK",2,1] call BIS_fnc_fadeEffect;
 sleep 3;
-
 if (!isNil "_skipTime") then {
 	skipTime _skipTime;
 };
