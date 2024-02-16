@@ -240,7 +240,7 @@ class CfgRespawnInventory
 	};
 	class HNDM_TLM4
 	{
-		displayName = "M4A1 Red dot + M203";
+		displayName = "M4A1 Red dot + M320";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
 		role = "HndmSeniorRifleman";
 		show = "true";
