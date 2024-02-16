@@ -3,6 +3,10 @@ _intelText = loadFile "texts\intel.html";
 
 if (isServer) then
 {
+	waitUntil
+	{ 																
+		!isNull obj_intel;
+	};
 	// Clear empty picture
 	obj_intel setVariable ["RscAttributeDiaryRecord_texture","a3\ui_f\data\igui\cfg\actions\clear_empty_ca.paa", true];
 	[
@@ -14,6 +18,10 @@ if (isServer) then
 
 if (hasInterface) then
 {
+	waitUntil
+	{ 																
+		!isNull obj_intel;
+	};
 	obj_intel addAction [
 		"Collect intel", // custom addAction title
 		{ [_this, "action"] spawn BIS_fnc_initIntelObject },

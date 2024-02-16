@@ -1,53 +1,53 @@
 author			= "Houndeye";
 onLoadName		= "Operation Smash And Grab";
-onLoadMission	= "Gooning Fanum Tax Skibidy Toilet Edging Gyatt";
-loadScreen		= "images\support.jpg";
+onLoadMission	= "Were you edging, or were you gooning?";
+loadScreen		= "images\logo.jpg";
 
 class Header
 {
 	gameType = "Coop";	// Game type
 	minPlayers =  1;	// minimum number of players the mission supports
-	maxPlayers = 10;	// maximum number of players the mission supports
+	maxPlayers = 16;	// maximum number of players the mission supports
 };
 
 class CfgRoles
 {
-	class GurSquadCommander
+	class HndmSquadCommander
 	{
 		displayName = "Squad Commander";
 		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
 	};
-	class GurSeniorRifleman
+	class HndmSeniorRifleman
 	{
 		displayName = "Senior Rifleman";
 		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
 	};
-	class GurMachineGunner
+	class HndmMachineGunner
 	{
 		displayName = "Machine Gunner";
 		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
 	};
-	class GurSniper
+	class HndmSniper
 	{
 		displayName = "Sniper";
 		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
 	};
-	class GurGrenadier
+	class HndmGrenadier
 	{
 		displayName = "Grenadier";
 		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
 	};
-	class GurMedic
+	class HndmMedic
 	{
 		displayName = "Medic";
 		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
 	};
-	class GurRifleman
+	class HndmRifleman
 	{
 		displayName = "Rifleman";
 		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
 	};
-	class GurSapper
+	class HndmSapper
 	{
 		displayName = "Sapper";
 		icon = "a3\Ui_f\data\GUI\Cfg\RespawnRoles\assault_ca.paa";
@@ -69,11 +69,11 @@ class CfgRespawnInventory
 		items[] = {"ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_tourniquet", "ACE_tourniquet"};
 		linkedItems[] = {"rhs_vest_pistol_holster", "rhs_googles_black", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "B_UavTerminal", "rhs_acc_pgs64_74u"};
 	};
-	class GUR_SniperSVD
+	class HNDM_SniperSVD
 	{
 		displayName = "SVD";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurSniper";
+		role = "HndmSniper";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "";
@@ -82,11 +82,11 @@ class CfgRespawnInventory
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet", "ACE_Kestrel4500"};
 		linkedItems[] = {"Vest06", "rhsusf_opscore_mc_cover_pelt", "rhsusf_oakley_goggles_clr", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhs_acc_tgpv2", "rhs_acc_pso1m2"};
 	};
-	class GUR_SniperSR25
+	class HNDM_SniperSR25
 	{
 		displayName = "SR-25";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurSniper";
+		role = "HndmSniper";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "";
@@ -95,11 +95,11 @@ class CfgRespawnInventory
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet", "ACE_Kestrel4500"};
 		linkedItems[] = {"Vest06", "rhsusf_opscore_mc_cover_pelt", "rhsusf_oakley_goggles_clr", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhsusf_acc_aac_762sdn6_silencer", "rhsusf_acc_nxs_3515x50f1_md", "rhsusf_acc_harris_bipod"};
 	};
-	class GUR_RiflemanM4
+	class HNDM_RiflemanM4
 	{
 		displayName = "M4A1 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurRifleman";
+		role = "HndmRifleman";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "";
@@ -108,11 +108,11 @@ class CfgRespawnInventory
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet"};
 		linkedItems[] = {"Vest05", "rhsusf_opscore_mc_cover_pelt", "rhs_googles_clear", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhsusf_acc_nt4_black", "rhsusf_acc_T1_high"};
 	};
-	class GUR_RiflemanAK
+	class HNDM_RiflemanAK
 	{
 		displayName = "AK-74 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurRifleman";
+		role = "HndmRifleman";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "";
@@ -121,11 +121,11 @@ class CfgRespawnInventory
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet"};
 		linkedItems[] = {"Vest05", "rhsusf_opscore_mc_cover_pelt", "rhs_googles_clear", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhs_acc_tgpa", "rhsusf_acc_T1_low"};
 	};
-	class GUR_GunnerFN
+	class HNDM_GunnerFN
 	{
 		displayName = "FN Minimi";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurMachineGunner";
+		role = "HndmMachineGunner";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_assault_eagleaiii_ocp";
@@ -134,11 +134,11 @@ class CfgRespawnInventory
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet"};
 		linkedItems[] = {"rhsusf_iotv_ocp_SAW", "rhsusf_opscore_mc_cover_pelt", "rhsusf_shemagh2_gogg_tan", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhsusf_acc_nt4_black", "rhsusf_acc_eotech_xps3", "rhsusf_acc_saw_bipod"};
 	};
-	class GUR_GunnerPKM
+	class HNDM_GunnerPKM
 	{
 		displayName = "PKM";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurMachineGunner";
+		role = "HndmMachineGunner";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_assault_eagleaiii_ocp";
@@ -147,11 +147,11 @@ class CfgRespawnInventory
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet"};
 		linkedItems[] = {"rhsusf_iotv_ocp_SAW", "rhsusf_opscore_mc_cover_pelt", "rhsusf_shemagh2_gogg_tan", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS"};
 	};
-	class GUR_MedicAK
+	class HNDM_MedicAK
 	{
 		displayName = "AK-74 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurMedic";
+		role = "HndmMedic";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_assault_eagleaiii_ocp";
@@ -160,11 +160,11 @@ class CfgRespawnInventory
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_morphine", "ACE_morphine", "ACE_morphine", "ACE_morphine", "ACE_morphine", "ACE_morphine", "ACE_morphine", "ACE_morphine", "ACE_morphine", "ACE_morphine"};
 		linkedItems[] = {"Vest03", "rhsusf_opscore_mc_cover_pelt", "rhs_googles_clear", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhs_acc_tgpa", "rhsusf_acc_T1_low"};
 	};
-	class GUR_MedicM4
+	class HNDM_MedicM4
 	{
 		displayName = "M4A1 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurMedic";
+		role = "HndmMedic";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_assault_eagleaiii_ocp";
@@ -173,11 +173,11 @@ class CfgRespawnInventory
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_salineIV_500", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_epinephrine", "ACE_morphine", "ACE_morphine", "ACE_morphine", "ACE_morphine", "ACE_morphine", "ACE_morphine", "ACE_morphine", "ACE_morphine", "ACE_morphine", "ACE_morphine"};
 		linkedItems[] = {"Vest03", "rhsusf_opscore_mc_cover_pelt", "rhs_googles_clear", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhsusf_acc_nt4_black", "rhsusf_acc_T1_high"};
 	};
-	class GUR_GrenadierAK
+	class HNDM_GrenadierAK
 	{
 		displayName = "AK-74 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurGrenadier";
+		role = "HndmGrenadier";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhs_rpg_empty";
@@ -186,11 +186,11 @@ class CfgRespawnInventory
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet"};
 		linkedItems[] = {"Vest05", "rhsusf_opscore_mc_cover_pelt", "rhs_googles_clear", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhs_acc_tgpa", "rhsusf_acc_T1_low"};
 	};
-	class GUR_GrenadierM4
+	class HNDM_GrenadierM4
 	{
 		displayName = "M4A1 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurGrenadier";
+		role = "HndmGrenadier";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhs_rpg_empty";
@@ -199,37 +199,37 @@ class CfgRespawnInventory
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet"};
 		linkedItems[] = {"Vest05", "rhsusf_opscore_mc_cover_pelt", "rhs_googles_clear", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhsusf_acc_nt4_black", "rhsusf_acc_T1_high"};
 	};
-	class GUR_SapperAK
+	class HNDM_SapperAK
 	{
 		displayName = "AK-74 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurSapper";
+		role = "HndmSapper";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_falconii_mc";
 		weapons[] = {"rhs_weap_ak74n_2_npz", "rhsusf_weap_glock17g4", "Throw", "Put"};
-		magazines[] = {"HandGrenade", "SmokeShell", "HandGrenade", "HandGrenade", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhsusf_mag_17Rnd_9x19_FMJ", "rhs_ec75_mag", "rhs_ec75_mag", "rhs_ec75_mag", "rhs_ec200_mag", "rhs_ec200_mag", "rhs_ec200_mag", "rhs_ec400_mag", "rhs_ec400_mag", "rhs_ec400_mag", "rhs_30Rnd_545x39_7N10_plum_AK", "rhsusf_mag_17Rnd_9x19_FMJ"};
-		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet"};
+		magazines[] = {"HandGrenade", "SmokeShell", "HandGrenade", "HandGrenade", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhsusf_mag_17Rnd_9x19_FMJ", "rhs_ec400_mag", "rhs_ec400_mag", "rhs_ec400_mag", "rhs_ec400_mag", "rhs_ec400_mag", "rhs_ec400_mag", "rhs_30Rnd_545x39_7N10_plum_AK", "rhsusf_mag_17Rnd_9x19_FMJ"};
+		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet", "ACE_Clacker"};
 		linkedItems[] = {"Vest05", "rhsusf_opscore_mc_cover_pelt", "rhs_googles_clear", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhs_acc_tgpa", "rhsusf_acc_T1_low"};
 	};
-	class GUR_SapperM4
+	class HNDM_SapperM4
 	{
 		displayName = "M4A1 Red dot";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurSapper";
+		role = "HndmSapper";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_falconii_mc";
 		weapons[] = {"rhs_weap_m4a1_blockII_KAC_bk", "rhsusf_weap_glock17g4", "Throw", "Put"};
-		magazines[] = {"HandGrenade", "SmokeShell", "HandGrenade", "HandGrenade", "rhsusf_mag_17Rnd_9x19_FMJ", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_ec75_mag", "rhs_ec75_mag", "rhs_ec75_mag", "rhs_ec200_mag", "rhs_ec200_mag", "rhs_ec200_mag", "rhs_ec400_mag", "rhs_ec400_mag", "rhs_ec400_mag", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhsusf_mag_17Rnd_9x19_FMJ"};
-		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet"};
+		magazines[] = {"HandGrenade", "SmokeShell", "HandGrenade", "HandGrenade", "rhsusf_mag_17Rnd_9x19_FMJ", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhs_ec400_mag", "rhs_ec400_mag", "rhs_ec400_mag", "rhs_ec400_mag", "rhs_ec400_mag", "rhs_mag_30Rnd_556x45_M855A1_PMAG", "rhsusf_mag_17Rnd_9x19_FMJ"};
+		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet", "ACE_Clacker"};
 		linkedItems[] = {"Vest05", "rhsusf_opscore_mc_cover_pelt", "rhs_googles_clear", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhsusf_acc_nt4_black", "rhsusf_acc_T1_high"};
 	};
-	class GUR_TLAK
+	class HNDM_TLAK
 	{
 		displayName = "AK-74 Red dot + GP25";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurSeniorRifleman";
+		role = "HndmSeniorRifleman";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_falconii_mc";
@@ -238,11 +238,11 @@ class CfgRespawnInventory
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet"};
 		linkedItems[] = {"Vest06", "rhsusf_opscore_mc_cover_pelt", "rhs_googles_clear", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhs_acc_dtk1983", "rhsusf_acc_T1_low"};
 	};
-	class GUR_TLM4
+	class HNDM_TLM4
 	{
 		displayName = "M4A1 Red dot + M203";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurSeniorRifleman";
+		role = "HndmSeniorRifleman";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "rhsusf_falconii_mc";
@@ -251,11 +251,11 @@ class CfgRespawnInventory
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet"};
 		linkedItems[] = {"Vest06", "rhsusf_opscore_mc_cover_pelt", "rhs_googles_clear", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhsusf_acc_nt4_black", "rhsusf_acc_T1_high"};
 	};
-	class GUR_SLM4
+	class HNDM_SLM4
 	{
 		displayName = "M4A1 LPVO";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurSquadCommander";
+		role = "HndmSquadCommander";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "";
@@ -264,11 +264,11 @@ class CfgRespawnInventory
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet"};
 		linkedItems[] = {"Vest04", "rhsusf_opscore_mc_cover_pelt", "rhsusf_oakley_goggles_clr", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhsusf_acc_nt4_black", "Scot_EO_Vudu"};
 	};
-	class GUR_SLAK
+	class HNDM_SLAK
 	{
 		displayName = "AK-74 LPVO";
 		icon = "\A3\Ui_f\data\GUI\Cfg\Ranks\sergeant_gs.paa";
-		role = "GurSquadCommander";
+		role = "HndmSquadCommander";
 		show = "true";
 		uniformClass = "rhs_uniform_g3_mc";
 		backpack = "";
@@ -276,5 +276,23 @@ class CfgRespawnInventory
 		magazines[] = {"HandGrenade", "SmokeShell", "HandGrenade", "HandGrenade", "rhsusf_mag_17Rnd_9x19_FMJ", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhs_30Rnd_545x39_7N10_plum_AK", "rhsusf_mag_17Rnd_9x19_FMJ"};
 		items[] = {"ACE_personalAidKit", "ACE_splint", "ACE_splint", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_fieldDressing", "ACE_tourniquet", "ACE_tourniquet"};
 		linkedItems[] = {"Vest04", "rhsusf_opscore_mc_cover_pelt", "rhsusf_oakley_goggles_clr", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "ItemGPS", "rhs_acc_tgpa", "Scot_EO_Vudu"};
+	};
+};
+class CfgFunctions
+{
+	class HNDM
+	{
+		class Mission
+		{
+			class onObjectiveComplete {
+				file = functions\fn_onObjectiveComplete.sqf;
+			};
+			class beginMission {
+				file = functions\fn_beginMission.sqf;
+			};
+			class deployReinforcements {
+				file = functions\fn_deployReinforcements.sqf;
+			};
+		};
 	};
 };

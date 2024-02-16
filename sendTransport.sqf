@@ -13,7 +13,7 @@ _transportUnit setVehicleLock "LOCKED";
 //fade screen and sound
 {
 	[{ 2 fadeSound 0; }] remoteExec ["call", _x];
-	[{ [0,"BLACK",2,1] call BIS_fnc_fadeEffect; }] remoteExec ["call", _x];
+	[{ [0,"BLACK",2,0] call BIS_fnc_fadeEffect; }] remoteExec ["call", _x];
 } forEach crew _transportUnit;
 sleep 3;
 if (!isNil "_skipTime") then {
@@ -27,7 +27,7 @@ _transportUnit setPosATL _finalDestPos;
 //WAKE UP
 {
 	[{2 fadeSound 1; }] remoteExec ["call", _x];
-	[{ [1,"BLACK",3,1] call BIS_fnc_fadeEffect; }] remoteExec ["call", _x];
+	[{ [1,"BLACK",3,0] call BIS_fnc_fadeEffect; }] remoteExec ["call", _x];
 } forEach crew _transportUnit;
 
 // unlock and turn off the vehicle

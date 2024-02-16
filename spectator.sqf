@@ -12,7 +12,7 @@ BIS_fnc_feedback_allowPP = false;
 _RscLayer = "BIS_fnc_respawnSpectator" call bis_fnc_rscLayer;
 _RscLayer cutrsc ["RscSpectator","plain"];
 
-_HintLayer = "HND_hint" call bis_fnc_rscLayer;
+_HintLayer = "HNDM_hint" call bis_fnc_rscLayer;
 _HintLayer cutText ["left-right arrow keys to switch players, ESC to stop spectating", "PLAIN DOWN"];
 /* Exits spectator camera using the Ctrl + T key */
 BEARB_SpectatorKeyDown =
@@ -24,7 +24,7 @@ BEARB_SpectatorKeyDown =
 		BIS_fnc_feedback_allowPP = true;
 		/* Stops spectator script */
 		("BIS_fnc_respawnSpectator" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
-		("HND_hint" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
+		("HNDM_hint" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 		/* Removes event handlers detecting key press */
 		(findDisplay 46) displayRemoveEventHandler ["KeyDown", BEARB_SpectatorEH];
 		/* Allows unit moving */
