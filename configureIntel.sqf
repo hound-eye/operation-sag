@@ -24,7 +24,14 @@ if (hasInterface) then
 	};
 	obj_intel addAction [
 		"Collect intel", // custom addAction title
-		{ [_this, "action"] spawn BIS_fnc_initIntelObject },
+		{
+			"marker_signal" setMarkerAlpha 1;
+			"marker_recon" setMarkerAlpha 1;
+			"marker_antiair" setMarkerAlpha 1;
+			"marker_support" setMarkerAlpha 1;
+			"marker_mortar" setMarkerAlpha 1;
+			[_this, "action"] spawn BIS_fnc_initIntelObject;
+		},
 		[],
 		10,
 		true,

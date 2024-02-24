@@ -16,3 +16,6 @@ this addWeaponWithAttachmentsCargoGlobal [["rhs_weap_vss", "", "", "rhs_acc_pso1
   this addItemCargoGlobal _x;  
 } forEach [["rhs_acc_tgpa", 5]]; 
  
+this addAction ["Skip to 0530",{[] remoteExec ["HNDM_fnc_beginMission", 2];}];
+this addAction ["ENABLE SPAWNS", {[missionNamespace, "HNDM_allowedReinforcements", true] call BIS_fnc_setServerVariable;}];
+this addAction ["DISABLE SPAWNS", {[missionNamespace, "HNDM_allowedReinforcements", false] call BIS_fnc_setServerVariable;}];

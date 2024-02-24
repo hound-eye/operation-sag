@@ -15,8 +15,4 @@ sleep 3;
 [[2025, 4, 30, 5, 30]] remoteExec ["setDate"];
 sleep 2;
 [{2 fadeSound 1; cutText ["Time - 05:30", "BLACK IN", 5]; }] remoteExec ["call"];
-
-sleep 60*1; // wait 90 minutes
-[[blufor, "BLU"], "We can't send any more reinforcements!"] remoteExec ["sideChat"];
-[nil, "HNDM_allowedReinforcements", false] call BIS_fnc_setServerVariable;
 true;

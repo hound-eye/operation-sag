@@ -13,6 +13,11 @@
 */
 if (!isServer) exitWith {};
 
+// script does nothing, if reinforcements are already being deployed
+[missionNamespace, "HNDM_deployingInProgress", false] call BIS_fnc_getServerVariable;
+if (HNDM_deployingInProgress) exitWith {};
+[missionNamespace, "HNDM_deployingInProgress", true] call BIS_fnc_setServerVariable;
+
 params ["_objTrigger"];
 
 //_toPos - object, whose position is used to deploy reinforcements to
@@ -66,7 +71,7 @@ for [{_i=10},{_i>=2},{_i=_i-1}] do
 {
 	{
 		if (isPlayer _x ) then {
-			[format ["Deploying friendly reinf in %1 seconds", _i]] remoteExec ["hint", owner _x]; 
+			[format ["Deploying friendly reinforcements in %1 seconds", _i]] remoteExec ["hint", owner _x]; 
 		};
 	} forEach _spawnees;
 	sleep 1;
@@ -90,11 +95,15 @@ if (count _spawnees > 0) then
 	{
 		_x setPosATL getPos _toPos;
 		if (isPlayer _x) then {
+			[] remoteExec ["HNDM_fnc_stopSpectate", owner _x];
 			[""] remoteExec ["hintSilent", owner _x];
 			[1,"BLACK",1,0] remoteExec ["BIS_fnc_fadeEffect", owner _x];
 		};
 	} forEach _spawnees;
 	[zeus, _deployMessage] remoteExec ["sideChat"];
 };
+
+[missionNamespace, "HNDM_deployingInProgress", false] call BIS_fnc_setServerVariable;
+
 true;
 
