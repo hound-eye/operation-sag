@@ -1,6 +1,6 @@
 author			= "Houndeye";
 onLoadName		= "Operation Smash And Grab";
-onLoadMission	= "Were you edging, or were you gooning?";
+onLoadMission	= "Raid the russian-controlled village of Vasylivka";
 loadScreen		= "images\logo.jpg";
 
 class Header
